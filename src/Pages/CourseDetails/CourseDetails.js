@@ -19,7 +19,7 @@ const CourseDetails = () => {
       } = course;
 
       const handleNavigate = () => {
-        navigate(`/checkout`)
+        navigate(`/checkout/${_id}`)
       }
 
 

@@ -41,7 +41,7 @@ export const Routes = createBrowserRouter([
                 loader: ({params}) => fetch(`https://edulayer.vercel.app/course/${params.id}`)
             },
             {
-                path: `/checkout`,
+                path: `/checkout/:id`,
                 element: <CheckOut></CheckOut>,
                 loader: ({params}) => fetch(`https://edulayer.vercel.app/course/${params.id}`)
             }
