@@ -145,10 +145,10 @@ const Register = () => {
       Already have an account? Please!
         <Link
           rel="noopener noreferrer"
-          href="#"
+          to={`/login`}
           className="underline dark:text-gray-100"
         >
-          Sign up
+          Log in
         </Link>
       </p>
     </div>
