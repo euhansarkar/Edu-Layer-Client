@@ -1,11 +1,27 @@
-import React from "react";
+import React, { createContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Course = ({ course }) => {
-    const {title, category_id, price, total_enrolled, instructor, image_url, details} = course;
+  const navigate = useNavigate();
+  const {
+    title,
+    category_id,
+    _id,
+    price,
+    total_enrolled,
+    instructor,
+    image_url,
+    details,
+  } = course;
+
+  const handleNavigate = () => {
+    navigate(`/course/${_id}`)
+  }
+
   return (
     <div>
       <div className="card lg:card-side bg-base-100 shadow-xl border border-sky-400">
-        <figure>
+        <figure className="object-fill">
           <img src={image_url} alt="Album" />
         </figure>
         <div className="card-body">
@@ -14,7 +30,7 @@ const Course = ({ course }) => {
           <div className="card-actions flex items-center justify-between">
             <p>instructor: {instructor.name}</p>
             <p>price: ${price.number}</p>
-            <button className="btn btn-primary">enroll now</button>
+              <button onClick={handleNavigate} className="btn btn-primary">enroll now</button>
           </div>
         </div>
       </div>

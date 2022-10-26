@@ -1,5 +1,6 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const Register = () => {
@@ -68,6 +69,18 @@ const Register = () => {
             name="email"
             id="email"
             placeholder="email"
+            className="w-full px-4 py-1 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 text-black focus:dark:border-blue-400"
+          />
+        </div>
+        <div className="space-y-1 text-sm">
+          <label htmlFor="photoURL" className="block dark:text-gray-400">
+            Your Email
+          </label>
+          <input
+            type="text"
+            name="photoURL"
+            id="photoURL"
+            placeholder="photo url"
             className="w-full px-4 py-1 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 text-black focus:dark:border-blue-400"
           />
         </div>
