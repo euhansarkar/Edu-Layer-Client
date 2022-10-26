@@ -22,7 +22,7 @@ const Course = ({ course }) => {
     <div>
       <div className="card lg:card-side bg-base-100 shadow-xl border border-sky-400">
         <figure className="object-fill">
-          <img src={image_url} alt="Album" />
+          <img className="h-full w-full" src={image_url} alt="Album" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>

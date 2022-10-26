@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../Layout/Main';
+import CheckOut from '../../Pages/CheckOut/CheckOut';
 import CourseDetails from '../../Pages/CourseDetails/CourseDetails';
 import Courses from '../../Pages/Courses/Courses';
 import Home from '../../Pages/Home/Home';
@@ -37,6 +38,11 @@ export const Routes = createBrowserRouter([
             {
                 path: `/course/:id`,
                 element: <CourseDetails></CourseDetails>,
+                loader: ({params}) => fetch(`https://edulayer.vercel.app/course/${params.id}`)
+            },
+            {
+                path: `/checkout`,
+                element: <CheckOut></CheckOut>,
                 loader: ({params}) => fetch(`https://edulayer.vercel.app/course/${params.id}`)
             }
             
