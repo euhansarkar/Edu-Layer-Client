@@ -7,11 +7,11 @@ const PrivateRoutes = ({ children }) => {
   const location = useLocation();
 
   if(loading){
-    return 
+    return <progress className="progress w-56"></progress>
   }
 
   if (!user) {
-    <Navigate to={`/login`} state={{ from: location }} replace></Navigate>;
+    return <Navigate to={`/login`} state={{ from: location }} replace></Navigate>;
   }
   return children;
 };
