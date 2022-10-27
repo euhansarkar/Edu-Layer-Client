@@ -57,8 +57,10 @@ const Login = () => {
   };
 
   return (
-    <div className="grid grid-template-2">
-      <div></div>
+    <div className="flex">
+      <div>
+        <img className="object-contain rounded h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 dark:bg-gray-500" src="https://static.vecteezy.com/system/resources/previews/008/734/789/non_2x/cartoon-little-boy-playing-video-game-vector.jpg" alt="" />
+      </div>
       <div className="w-full max-w-md bg-slate-700 m-2 text-white p-3 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form

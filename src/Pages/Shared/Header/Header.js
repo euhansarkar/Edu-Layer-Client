@@ -69,7 +69,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+          <Link to={`/`} className="btn btn-ghost normal-case text-xl font-bold text-white">EduLayer</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu text-white font-bold menu-horizontal p-0">

@@ -39,7 +39,7 @@ const Info = () => {
             </div>
             <div className="flex flex-col justify-center align-middle">
               <p className="text-3xl font-semibold leading-none">7500</p>
-              <p className="capitalize">New customers</p>
+              <p className="capitalize">New Students</p>
             </div>
           </div>
           <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-900 dark:text-gray-100">
