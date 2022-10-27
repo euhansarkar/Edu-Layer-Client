@@ -9,6 +9,7 @@ import Courses from '../../Pages/Courses/Courses';
 import Faq from '../../Pages/Faq/Faq';
 import Home from '../../Pages/Home/Home';
 import Login from '../../Pages/Login/Login';
+import NotFound from '../../Pages/NotFound/NotFound';
 import Register from '../../Pages/Register/Register';
 import PrivateRoutes from '../PrivateRoutes/PrivateRoutes';
 
@@ -60,6 +61,10 @@ export const Routes = createBrowserRouter([
             {
                 path: `/faq`,
                 element: <Faq></Faq>
+            },
+            {
+                path: `*`,
+                element: <NotFound></NotFound>
             }
             
         ]
