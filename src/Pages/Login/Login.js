@@ -14,7 +14,6 @@ const Login = () => {
     const handleFormSubmit = event => {
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
 
@@ -54,7 +53,7 @@ const Login = () => {
               name="email"
               id="email"
               placeholder="Email"
-              className="w-full px-4 py-1 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-blue-400"
+              className="w-full px-4 py-1 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 text-black focus:dark:border-blue-400"
             />
           </div>
           <div className="space-y-1 text-sm">

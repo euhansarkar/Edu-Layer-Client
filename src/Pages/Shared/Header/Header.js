@@ -13,6 +13,7 @@ const Header = () => {
       });
   };
 
+
   return (
     <div className="sticky top-0 z-50">
       <div className="navbar bg-base-100 bg-indigo-700 ">
@@ -82,7 +83,7 @@ const Header = () => {
               <Link to={`/faq`}>FAQ</Link>
             </li>
             <li>
-              <Link to={`/blog`}>BLOGS</Link>
+              <Link to={`/blogs`}>BLOGS</Link>
             </li>
             <li>
               <div className="flex items-center justify-center w-full ">
@@ -100,7 +101,7 @@ const Header = () => {
         <div className="navbar-end gap-3">
           {user?.uid ? (
             <>
-              <img src={user.photoURL} alt="" />
+              <img className="h-8 w-8 rounded-full" src={user.photoURL} alt="" />
               <button onClick={handleLogOut}>LogOut</button>
             </>
           ) : (

@@ -1,29 +1,35 @@
 import { GoogleAuthProvider } from "firebase/auth";
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const Register = () => {
 
-    const {createUser, googleProviderSignIn} = useContext(AuthContext);
+  const [error, setError] = useState(``);
+    const {createUser, googleProviderSignIn, updateUserProfile} = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
+    const navigate = useNavigate();
 
     const handleFormSubmit = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
+        const photoURL = form.photoURL.value;
         const password = form.password.value;
-        console.log(name, email, password);
 
         createUser(email, password)
         .then(result => {
             const user = result?.user;
+            setError(``);
             console.log(user);
             form.reset();
+            handleUpdateUserProfile(name, photoURL);
+            navigate(`/`);
         })
         .catch(err => {
             console.error(err);
+            setError(err.message);
         })
     }
 
@@ -35,6 +41,16 @@ const Register = () => {
         .catch(err => {
           console.error(err);
         })
+    }
+
+    const handleUpdateUserProfile = (name, photoURL) => {
+      const profile = {
+        displayName: name,
+        photoURL: photoURL
+      }
+      updateUserProfile(profile)
+      .then(() => {})
+      .catch(error => console.error(error))
     }
 
   return (
@@ -74,7 +90,7 @@ const Register = () => {
         </div>
         <div className="space-y-1 text-sm">
           <label htmlFor="photoURL" className="block dark:text-gray-400">
-            Your Email
+            Photo URL
           </label>
           <input
             type="text"
@@ -104,6 +120,7 @@ const Register = () => {
         <button className="block w-full p-1 text-center rounded-sm dark:text-gray-900 dark:bg-blue-400 bg-slate-700">
           Register
         </button>
+        <h2>{error}</h2>
       </form>
       <div className="flex items-center space-x-1">
         <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>

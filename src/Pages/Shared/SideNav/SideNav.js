@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SideNav = () => {
     return (
         <div>
-            <h2>this is side nav</h2>
+            <Link to={``}>
+            <button>this is side nav</button>
+            </Link>
         </div>
     );
 };
