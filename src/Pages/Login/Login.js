@@ -57,7 +57,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex items-center">
       <div>
         <img className="object-contain rounded h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 dark:bg-gray-500" src="https://static.vecteezy.com/system/resources/previews/008/734/789/non_2x/cartoon-little-boy-playing-video-game-vector.jpg" alt="" />
       </div>

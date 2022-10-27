@@ -20,6 +20,7 @@ const Home = () => {
               </p>
               <div className="flex flex-col space-y-8 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
                 <Link
+                to={`/courses`}
                   rel="noopener noreferrer"
                   href="/courses"
                   className="px-8 py-3 text-lg font-semibold border border-red-500 hover:bg-red-500 hover:text-white rounded dark:bg-blue-400 dark:text-gray-900"
@@ -27,6 +28,7 @@ const Home = () => {
                   Enroll Now
                 </Link>
                 <Link
+                to={`/courses`}
                   rel="noopener noreferrer"
                   href="/register"
                   className="px-8 py-3 hover:text-white hover:bg-amber-400 border-amber-400 text-lg font-semibold border rounded dark:border-gray-100"
